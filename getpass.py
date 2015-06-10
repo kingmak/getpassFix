@@ -9,11 +9,8 @@ def getpass(prompt = 'Password: ', hideChar = ' '):
     count = 0
     while True:
         char = msvcrt.getch()
-        if char == '\r' or char == '\n':
-            break
-
-        if char == '\003':     #ctrl + c
-            raise KeyboardInterrupt
+        if char == '\r' or char == '\n': break
+        if char == '\003': raise KeyboardInterrupt #ctrl + c
 
         if char == '\b':
             count -= 1
