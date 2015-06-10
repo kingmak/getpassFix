@@ -2,11 +2,10 @@ import sys, msvcrt
 
 def getpass(prompt = 'Password: ', hideChar = ' '):
 
-    password = ''
-    for char in prompt: # so that we don't have to fiddle with print password, 
-        msvcrt.putch(char)
-    
     count = 0
+    password = ''
+    for char in prompt: msvcrt.putch(char)# cuz password, be trouble
+        
     while True:
         char = msvcrt.getch()
         if char == '\r' or char == '\n': break
